@@ -1,0 +1,13 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "{2AB73527-4D0C-21B0-4656-ECB7F8EF8FC8}",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "ThirdPersonGame",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}
