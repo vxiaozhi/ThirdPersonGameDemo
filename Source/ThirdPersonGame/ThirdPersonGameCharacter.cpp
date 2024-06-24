@@ -96,6 +96,7 @@ void AThirdPersonGameCharacter::TurnAtRate(float Rate)
 {
 	// calculate delta for this frame from the rate information
 	AddControllerYawInput(Rate * BaseTurnRate * GetWorld()->GetDeltaSeconds());
+	//GEngine->AddOnScreenDebugMessage(0, 1.0f, FColor::Red, TEXT("TurnAtRate"));
 }
 
 void AThirdPersonGameCharacter::LookUpAtRate(float Rate)
@@ -115,6 +116,7 @@ void AThirdPersonGameCharacter::MoveForward(float Value)
 		// get forward vector
 		const FVector Direction = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
 		AddMovementInput(Direction, Value);
+		GEngine->AddOnScreenDebugMessage(0, 1.0f, FColor::Red, TEXT("MoveForward"));
 	}
 }
 
@@ -130,5 +132,7 @@ void AThirdPersonGameCharacter::MoveRight(float Value)
 		const FVector Direction = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
 		// add movement in that direction
 		AddMovementInput(Direction, Value);
+
+		GEngine->AddOnScreenDebugMessage(0, 1.0f, FColor::Red, TEXT("Move right"));
 	}
 }
